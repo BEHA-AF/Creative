@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>case study!</title>
+  
+  <style>
+    /* --- Global Resets & Variables --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      /* Scaled down by 25% for better portfolio fit */
+      --mac-width: 600px;
+      --mac-height: 390px;
+      --iphone-width: 180px;
+      --iphone-height: 360px;
+      --bezel-color: #121212;
+    }
+
+    body {
+      background-image: radial-gradient(#d7d7d7 1px, transparent 1px);
+      background-size: 20px 20px;
+      background-color: #1C2230;
+      font-family: sans-serif;
+      margin: 0px;
+    }
+  
+  .nav {
+    border-radius: 25px;
+    background-color: rgba(241, 243, 244, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 5px 5px;
+    width: fit-content;
+    gap: 20px;
+    display: flex;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .btn {
+    background-color: rgba(255, 255, 255, 0.09);
+    backdrop-filter: blur(5px);
+    color: white;
+    border-radius: 1616px;
+    padding: 10px 25px;
+    text-decoration: none;
+  }
+  
+  .connect {
+    background-color: Blue;
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 1616px;
+  }
+  
+  .hero-title {
+    font-size: 60px;
+    margin: 80px 40px;
+  }
+  
+  .btn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 40px;
+    box-sizing: border-box;
+  }
+    
+  .hero-btn {
+    flex: 1;
+    margin: 0 10px;
+    background-color: #0E76A8;
+    height: 50px;
+    border-radius: 25px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 500;
+  }
+  
+  .case-study {
+    margin: 80px 0px;
+    padding: 20px 40px;
+    background-color: rgb(34, 40, 54, 0.5);
+    backdrop-filter: blur(100px);
+    border-radius: 100px;
+    color: white;
+  }
+  
+  .cert {
+    margin: 80px 0px;
+    padding: 20px 40px;
+    background-color: rgb(34, 40, 54, 0.5);
+    backdrop-filter: blur(100px);
+    border-radius: 100px;
+    color: white;
+  }
+
+    /* --- Layout Wrappers --- */
+    .mockup-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      padding: 40px 0px;
+    }
+
+    .mockup-container {
+      position: relative;
+      /* Shifted to match the newly scaled overlap */
+      margin-left: 60px; 
+    }
+
+    /* =========================================
+       MacBook Pro Mockup
+       ========================================= */
+    .macbook {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+      filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.15));
+    }
+
+    .macbook-screen-frame {
+      width: var(--mac-width);
+      height: var(--mac-height);
+      background-color: var(--bezel-color);
+      border-radius: 18px 18px 0 0;
+      padding: 12px 12px 18px 12px;
+      position: relative;
+    }
+
+    /* Camera and Notch */
+    .macbook-notch {
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 105px;
+      height: 21px;
+      background-color: var(--bezel-color);
+      border-radius: 0 0 9px 9px;
+      z-index: 10;
+    }
+
+    .macbook-camera {
+      position: absolute;
+      top: 17px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 7px;
+      height: 7px;
+      background-color: #0b0b0b;
+      border: 1.5px solid #222;
+      border-radius: 50%;
+      z-index: 11;
+    }
+
+    /* Screen Content Area */
+    .macbook-screen {
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      border-radius: 6px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .macbook-screen img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    /* Silver Base */
+    .macbook-base {
+      width: calc(var(--mac-width) + 75px);
+      height: 18px;
+      background: linear-gradient(to bottom, #e4e4e4, #b4b4b4);
+      border-radius: 0 0 12px 12px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.9), 
+                  0 6px 11px rgba(0, 0, 0, 0.2);
+    }
+
+    .macbook-base-notch {
+      width: 90px;
+      height: 6px;
+      background-color: #999;
+      border-radius: 0 0 6px 6px;
+      box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+
+    /* =========================================
+       iPhone Mockup (Left Overlap)
+       ========================================= */
+    .iphone {
+      position: absolute;
+      /* Position scaled for the smaller layout */
+      bottom: -15px; 
+      left: -105px; 
+      z-index: 2; 
+      filter: drop-shadow(12px 18px 25px rgba(0, 0, 0, 0.3));
+    }
+
+    .iphone-frame {
+      width: var(--iphone-width);
+      height: var(--iphone-height);
+      background-color: var(--bezel-color);
+      border-radius: 33px;
+      padding: 9px;
+      position: relative;
+      box-shadow: inset 0 0 0 1.5px #555, inset 0 0 0 3px var(--bezel-color);
+    }
+
+    /* Dynamic Island */
+    .iphone-island {
+      position: absolute;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 56px;
+      height: 16px;
+      background-color: #000;
+      border-radius: 15px;
+      z-index: 10;
+    }
+
+    /* Screen Content Area */
+    .iphone-screen {
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      border-radius: 24px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .iphone-screen img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+  </style>
+  
+</head>
+<body>
+  <div class="nav">
+    <a href="" class="btn">
+      Home
+    </a>
+    
+    <a href="" class="btn">
+      Works
+    </a>
+    <a href="" class="btn">
+      Certifications
+    </a>
+    <a href="" class="connect">
+      Connect
+    </a>
+  </div>
+  
+  <h1 class="hero-title">
+  <span style="color: lavender;">I'm a </span>
+  <span style="color: orange;">problem-solving designer</span>
+  <span style="color: lavender;"> driven by deep thought.</span>
+  </h1>
+  
+  <div class="btn-container">
+    <a href="https://www.linkedin.com/in/ajmin-fayaz" class="hero-btn">
+      <svg width="50px" height="50px" viewBox="0 0 16 34.6" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect x="2" y="2" width="28" height="28" rx="14" fill=""></rect> <path d="M12.6186 9.69215C12.6186 10.6267 11.8085 11.3843 10.8093 11.3843C9.81004 11.3843 9 10.6267 9 9.69215C9 8.7576 9.81004 8 10.8093 8C11.8085 8 12.6186 8.7576 12.6186 9.69215Z" fill="white"></path> <path d="M9.24742 12.6281H12.3402V22H9.24742V12.6281Z" fill="white"></path> <path d="M17.3196 12.6281H14.2268V22H17.3196C17.3196 22 17.3196 19.0496 17.3196 17.2049C17.3196 16.0976 17.6977 14.9855 19.2062 14.9855C20.911 14.9855 20.9008 16.4345 20.8928 17.5571C20.8824 19.0244 20.9072 20.5219 20.9072 22H24V17.0537C23.9738 13.8954 23.1508 12.4401 20.4433 12.4401C18.8354 12.4401 17.8387 13.1701 17.3196 13.8305V12.6281Z" fill="white"></path> </g></svg>
+      <span><b>LinkedIn</b></span>
+    </a>
+    
+    <a href="mailto:fayazajmin@gmail.com" class="hero-btn">
+      <svg width="30px" height="30px" viewBox="0 -31.5 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M58.1818182,192.049515 L58.1818182,93.1404244 L27.5066233,65.0770089 L0,49.5040608 L0,174.59497 C0,184.253152 7.82545455,192.049515 17.4545455,192.049515 L58.1818182,192.049515 Z" fill="#4285F4"> </path> <path d="M197.818182,192.049515 L238.545455,192.049515 C248.203636,192.049515 256,184.224061 256,174.59497 L256,49.5040608 L224.844415,67.3422767 L197.818182,93.1404244 L197.818182,192.049515 Z" fill="#34A853"> </path> <polygon fill="#EA4335" points="58.1818182 93.1404244 54.0077618 54.4932827 58.1818182 17.5040608 128 69.8676972 197.818182 17.5040608 202.487488 52.4960089 197.818182 93.1404244 128 145.504061"> </polygon> <path d="M197.818182,17.5040608 L197.818182,93.1404244 L256,49.5040608 L256,26.2313335 C256,4.64587897 231.36,-7.65957557 214.109091,5.28587897 L197.818182,17.5040608 Z" fill="#FBBC04"> </path> <path d="M0,49.5040608 L26.7588051,69.5731646 L58.1818182,93.1404244 L58.1818182,17.5040608 L41.8909091,5.28587897 C24.6109091,-7.65957557 0,4.64587897 0,26.2313335 L0,49.5040608 Z" fill="#C5221F"> </path> </g> </g></svg>
+      <span><b>Mail</b></span>
+    </a>
+    
+  </div>
+  
+  <div class="case-study">
+    <h1>Case Study</h1>
+
+  <div class="mockup-wrapper">
+    <div class="mockup-container">
+      
+      <!-- MacBook Mockup (Background) -->
+      <div class="macbook">
+        <div class="macbook-screen-frame">
+          <div class="macbook-camera"></div>
+          <div class="macbook-notch"></div>
+          <div class="macbook-screen">
+            <!-- REPLACE THIS IMAGE WITH YOUR MACBOOK DESIGN -->
+            <img src="travel-large.jpg">
+          </div>
+        </div>
+        <div class="macbook-base">
+          <div class="macbook-base-notch"></div>
+        </div>
+      </div>
+
+      <!-- iPhone Mockup (Foreground Overlap) -->
+      <div class="iphone">
+        <div class="iphone-frame">
+          <div class="iphone-island"></div>
+          <div class="iphone-screen">
+            <!-- REPLACE THIS IMAGE WITH YOUR IPHONE DESIGN -->
+            <img src="travel.jpg">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  </div>
+  
+  <div class="cert">
+    <h1>Certifications</h1>
+  </div>
+  
+
+</body>
+</html>
