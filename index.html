@@ -14,7 +14,7 @@
   }
   
   :root {
-      /* Scaled down by 25% for better portfolio fit */
+      
       --mac-width: 600px;
       --mac-height: 390px;
       --iphone-width: 180px;
@@ -231,7 +231,7 @@
   
   .iphone {
       position: absolute;
-      /* Position scaled for the smaller layout */
+      
       bottom: -50px; 
       left: -105px; 
       z-index: 2; 
@@ -281,7 +281,7 @@
       position: relative;
       width: var(--ipad-lg-width);
       height: var(--ipad-lg-height);
-      /* Outer yellow casing */
+      
       background-color: var(--bezel-inner);
       border: 4px solid var(--bezel-yellow);
       border-radius: 36px;
@@ -294,7 +294,7 @@
   .apple-pencil {
       position: absolute;
       top: -22px;
-      left: 15%; /* Positioned slightly off-center left */
+      left: 15%; 
       display: flex;
       align-items: center;
       z-index: 5;
@@ -304,7 +304,7 @@
   .pencil-body {
       width: 380px;
       height: 18px;
-      /* Cylindrical gradient */
+      
       background: linear-gradient(to bottom, #ffffff 0%, #f0f0f0 40%, #d4d4d4 100%);
       border-radius: 9px 0 0 9px;
     }
@@ -313,25 +313,25 @@
       width: 24px;
       height: 16px;
       background: linear-gradient(to bottom, #f9f9f9, #d0d0d0);
-      /* Tapered shape for the right side tip */
+      
       border-radius: 0 12px 12px 0 / 0 50% 50% 0;
-      margin-left: 2px; /* Small seam */
+      margin-left: 2px; 
     }
   
   .ipad-small {
       position: absolute;
-      /* Overlap positioning to the bottom right */
+      
       bottom: -40px;
       right: -240px; 
       width: var(--ipad-sm-width);
       height: var(--ipad-sm-height);
-      /* Outer pinkish casing */
+      
       background-color: var(--bezel-inner);
       border: 4px solid var(--bezel-pink);
       border-radius: 32px;
       padding: 20px;
       z-index: 2;
-      /* Heavy shadow on the left side to show depth over the yellow iPad */
+      
       box-shadow: -30px 20px 50px rgba(0, 0, 0, 0.8),
                   inset 0 0 0 1px #333;
     }
@@ -408,15 +408,14 @@
   
   .paper-left {
       z-index: 2;
-      /* Shifted left, up, and rotated counter-clockwise */
+      
       transform: translate(-120px, -40px) rotate(18deg);
-      /* Heavy shadow cast onto the bottom paper */
+      
       box-shadow: 15px 20px 30px rgba(0, 0, 0, 0.18), inset 0 0 0 1px rgba(0,0,0,0.03);
     }
   
   .paper-right {
       z-index: 1;
-      /* Shifted right, down, and rotated slightly less */
       transform: translate(140px, 30px) rotate(-14deg);
       box-shadow: inset 0 0 0 1px rgba(0,0,0,0.03);
     }
