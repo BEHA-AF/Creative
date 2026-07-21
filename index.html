@@ -145,7 +145,6 @@
     transform: translateY(-2px);
   }
   
-  /* Mockup Layout fixed */
   .mockup-wrapper {
     margin: 0 auto 80px auto;
     max-width: 1100px;
@@ -161,7 +160,7 @@
   .ipad-small {
     position: relative;
     width: 100%;
-    height: 240px; /* Fixed Height Issue */
+    height: 240px;
     background-color: #090d16;
     border: 4px solid #334155; 
     border-radius: 24px;      
@@ -394,7 +393,6 @@
   </div>
   
   <div class="mockup-wrapper">
-    <!-- 1. Travel App Mockup -->
     <div class="ipad-small">
       <div class="ipad-screen">
         <img src="travel-1.jpg" alt="Travel View 1" class="slideshow-img active">
@@ -404,7 +402,6 @@
       </div>
     </div>
 
-    <!-- 2. Real Estate Mockup -->
     <div class="ipad-small">
       <div class="ipad-screen">
         <img src="real-estate-1.jpg" alt="Real Estate 1" class="slideshow-img active">
@@ -413,7 +410,6 @@
       </div>
     </div>
 
-    <!-- 3. Movie App Mockup -->
     <div class="ipad-small">
       <div class="ipad-screen">
         <img src="movie-1.jpg" alt="Movie View 1" class="slideshow-img active">
@@ -444,7 +440,6 @@
     </div>
 
   <script>
-    // Canvas Background
     const canvas = document.getElementById('bg-canvas');
     const ctx = canvas.getContext('2d');
 
@@ -519,7 +514,6 @@
     initCanvas();
     animate();
 
-    // Carousel Logic
     document.querySelectorAll('.carousel-container').forEach((container) => {
         const cards = container.querySelectorAll('.card');
         let activeIndex = 1; 
@@ -568,7 +562,6 @@
         updateCarousel();
     });
 
-    // iPad Automatic Slideshow Logic
     document.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll('.ipad-small').forEach((ipad) => {
         const images = ipad.querySelectorAll('.slideshow-img');
