@@ -185,7 +185,12 @@
   }
 
   .ipad-screen {
-  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #0f172a;
+  border-radius: 18px;       
+  overflow: hidden; /* ചിത്രങ്ങൾ ഐപാഡിന്റെ റൗണ്ട് എഡ്ജിന് പുറത്തേക്ക് പോകാതിരിക്കാൻ */
+  position: relative; 
 }
 
 .slideshow-img {
@@ -196,7 +201,7 @@
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 0.8s ease-in-out;
+  transition: opacity 0.8s ease-in-out; /* ചിത്രങ്ങൾ മാറുമ്പോഴുള്ള സ്മൂത്ത്‌നെസ്സ് */
 }
 
 .slideshow-img.active {
@@ -398,6 +403,7 @@
   </div>
   
   <div class="mockup-wrapper">
+  <!-- 1. Travel App Mockup -->
   <div class="ipad-small">
     <div class="ipad-screen">
       <img src="travel-1.jpg" alt="Travel View 1" class="slideshow-img active">
@@ -407,6 +413,7 @@
     </div>
   </div>
 
+  <!-- 2. Real Estate Mockup -->
   <div class="ipad-small">
     <div class="ipad-screen">
       <img src="real-estate-1.jpg" alt="Real Estate 1" class="slideshow-img active">
@@ -415,6 +422,7 @@
     </div>
   </div>
 
+  <!-- 3. Movie App Mockup -->
   <div class="ipad-small">
     <div class="ipad-screen">
       <img src="movie-1.jpg" alt="Movie View 1" class="slideshow-img active">
@@ -641,17 +649,25 @@
         updateCarousel();
     });
 
+    // ==========================================
+    // പുതിയതായി ചേർക്കേണ്ട iPad Slideshow JavaScript
+    // ==========================================
     document.querySelectorAll('.ipad-small').forEach((ipad) => {
       const images = ipad.querySelectorAll('.slideshow-img');
-      if (images.length <= 1) return;
+      if (images.length <= 1) return; // ഒന്നിൽ കൂടുതൽ ചിത്രങ്ങൾ ഉണ്ടെങ്കിൽ മാത്രം പ്രവർത്തിക്കും
 
       let currentIndex = 0;
 
       setInterval(() => {
+        // നിലവിലുള്ള ചിത്രത്തിന്റെ 'active' ക്ലാസ് മാറ്റുന്നു
         images[currentIndex].classList.remove('active');
+
+        // അടുത്ത ചിത്രത്തിന്റെ ഇൻഡെക്സ് എടുക്കുന്നു
         currentIndex = (currentIndex + 1) % images.length;
+
+        // പുതിയ ചിത്രത്തിന് 'active' ക്ലാസ് നൽകി തെളിയിക്കുന്നു
         images[currentIndex].classList.add('active');
-      }, 2500);
+      }, 2500); // 2.5 സെക്കൻഡ് ഇടവേള
     });
   </script>
 </body>
