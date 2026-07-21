@@ -4,8 +4,7 @@
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
   <title>iPad Mockup & Portfolio</title>
   
-    <style>
-  
+  <style>
   * {
     margin: 0;
     padding: 0;
@@ -23,7 +22,6 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  
   #bg-canvas {
     position: fixed;
     top: 0;
@@ -34,7 +32,6 @@
     pointer-events: none;
     opacity: 0.6;
   }
-  
   
   .nav {
     border-radius: 30px;
@@ -87,7 +84,6 @@
     transform: translateY(-1px);
     box-shadow: 0 6px 20px rgba(2, 132, 199, 0.4);
   }
-  
   
   .hero-title {
     font-size: 3.5rem;
@@ -149,7 +145,6 @@
     transform: translateY(-2px);
   }
   
-  
   .mockup-wrapper {
     margin: 0 auto 80px auto;
     max-width: 1100px;
@@ -185,29 +180,28 @@
   }
 
   .ipad-screen {
-  width: 100%;
-  height: 100%;
-  background-color: #0f172a;
-  border-radius: 18px;       
-  overflow: hidden; /* ചിത്രങ്ങൾ ഐപാഡിന്റെ റൗണ്ട് എഡ്ജിന് പുറത്തേക്ക് പോകാതിരിക്കാൻ */
-  position: relative; 
-}
+    width: 100%;
+    height: 100%;
+    background-color: #0f172a;
+    border-radius: 18px;       
+    overflow: hidden;
+    position: relative;
+  }
 
-.slideshow-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.8s ease-in-out; /* ചിത്രങ്ങൾ മാറുമ്പോഴുള്ള സ്മൂത്ത്‌നെസ്സ് */
-}
+  .slideshow-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+  }
 
-.slideshow-img.active {
-  opacity: 1;
-}
-
+  .slideshow-img.active {
+    opacity: 1;
+  }
 
   .ipad-small:nth-child(odd) {
     transform: rotate(-2deg) translateY(8px);
@@ -221,7 +215,6 @@
     transform: rotate(0deg) scale(1.04);
   }
 
-  
   .carousel-container {
     margin: 60px auto;
     position: relative;
@@ -322,7 +315,6 @@
     pointer-events: none;
   }
   
-  
   .content-section {
     position: relative;
     z-index: 10;
@@ -331,7 +323,6 @@
     max-width: 820px;
   }
 
-  
   .content-section:last-of-type {
     margin-bottom: 120px; 
   }
@@ -371,7 +362,6 @@
   }
   </style>
 
-  
 </head>
 <body>
 
@@ -403,39 +393,36 @@
   </div>
   
   <div class="mockup-wrapper">
-  <!-- 1. Travel App Mockup -->
-  <div class="ipad-small">
-    <div class="ipad-screen">
-      <img src="travel-1.jpg" alt="Travel View 1" class="slideshow-img active">
-      <img src="travel-2.jpg" alt="Travel View 2" class="slideshow-img">
-      <img src="travel-3.jpg" alt="Travel View 3" class="slideshow-img">
-      <img src="travel-4.jpg" alt="Travel View 4" class="slideshow-img">
+    <!-- 1. Travel App Mockup -->
+    <div class="ipad-small">
+      <div class="ipad-screen">
+        <img src="travel-1.jpg" alt="Travel View 1" class="slideshow-img active">
+        <img src="travel-2.jpg" alt="Travel View 2" class="slideshow-img">
+        <img src="travel-3.jpg" alt="Travel View 3" class="slideshow-img">
+        <img src="travel-4.jpg" alt="Travel View 4" class="slideshow-img">
+      </div>
+    </div>
+
+    <!-- 2. Real Estate Mockup -->
+    <div class="ipad-small">
+      <div class="ipad-screen">
+        <img src="real-estate-1.jpg" alt="Real Estate 1" class="slideshow-img active">
+        <img src="real-estate-2.jpg" alt="Real Estate 2" class="slideshow-img">
+        <img src="real-estate-3.jpg" alt="Real Estate 3" class="slideshow-img">
+      </div>
+    </div>
+
+    <!-- 3. Movie App Mockup -->
+    <div class="ipad-small">
+      <div class="ipad-screen">
+        <img src="movie-1.jpg" alt="Movie View 1" class="slideshow-img active">
+        <img src="movie-2.jpg" alt="Movie View 2" class="slideshow-img">
+        <img src="movie-3.jpg" alt="Movie View 3" class="slideshow-img">
+        <img src="movie-4.jpg" alt="Movie View 4" class="slideshow-img">
+      </div>
     </div>
   </div>
 
-  <!-- 2. Real Estate Mockup -->
-  <div class="ipad-small">
-    <div class="ipad-screen">
-      <img src="real-estate-1.jpg" alt="Real Estate 1" class="slideshow-img active">
-      <img src="real-estate-2.jpg" alt="Real Estate 2" class="slideshow-img">
-      <img src="real-estate-3.jpg" alt="Real Estate 3" class="slideshow-img">
-    </div>
-  </div>
-
-  <!-- 3. Movie App Mockup -->
-  <div class="ipad-small">
-    <div class="ipad-screen">
-      <img src="movie-1.jpg" alt="Movie View 1" class="slideshow-img active">
-      <img src="movie-2.jpg" alt="Movie View 2" class="slideshow-img">
-      <img src="movie-3.jpg" alt="Movie View 3" class="slideshow-img">
-      <img src="movie-4.jpg" alt="Movie View 4" class="slideshow-img">
-    </div>
-  </div>
-</div>
-
-  
-  
-  
   <div class="content-section">
     <h1 class="tt-pro">Lofio – Travel Booking App</h1>
     <h3 class="stt-pro">The Problem</h3>
@@ -452,7 +439,6 @@
             <div class="card"><img src="travel-2.jpg" alt=""><div class="card-content"><h3></h3><p></p></div></div>
             <div class="card"><img src="travel-3.jpg" alt=""><div class="card-content"><h3></h3><p></p></div></div>
             <div class="card"><img src="travel-4.jpg" alt=""><div class="card-content"><h3></h3><p></p></div></div>
-            
         </div>
     </div>
   
@@ -649,25 +635,18 @@
         updateCarousel();
     });
 
-    // ==========================================
-    // പുതിയതായി ചേർക്കേണ്ട iPad Slideshow JavaScript
-    // ==========================================
+    // iPad Slideshow Logic
     document.querySelectorAll('.ipad-small').forEach((ipad) => {
       const images = ipad.querySelectorAll('.slideshow-img');
-      if (images.length <= 1) return; // ഒന്നിൽ കൂടുതൽ ചിത്രങ്ങൾ ഉണ്ടെങ്കിൽ മാത്രം പ്രവർത്തിക്കും
+      if (images.length <= 1) return;
 
       let currentIndex = 0;
 
       setInterval(() => {
-        // നിലവിലുള്ള ചിത്രത്തിന്റെ 'active' ക്ലാസ് മാറ്റുന്നു
         images[currentIndex].classList.remove('active');
-
-        // അടുത്ത ചിത്രത്തിന്റെ ഇൻഡെക്സ് എടുക്കുന്നു
         currentIndex = (currentIndex + 1) % images.length;
-
-        // പുതിയ ചിത്രത്തിന് 'active' ക്ലാസ് നൽകി തെളിയിക്കുന്നു
         images[currentIndex].classList.add('active');
-      }, 2500); // 2.5 സെക്കൻഡ് ഇടവേള
+      }, 2500);
     });
   </script>
 </body>
